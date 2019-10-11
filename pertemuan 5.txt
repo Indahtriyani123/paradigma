@@ -1,0 +1,27 @@
+>>> class Complex:
+	def __init__(self, realpart, imagpart):
+		self.r = realpart
+		self.i = imagpart
+
+		
+>>> x = Complex(3.0, -4.5)
+>>> x.r, x.i
+(3.0, -4.5)
+>>> 
+>>> class Dog:
+	 kind = 'canine'
+	 def __init__(self, name):
+		 self.name = name
+
+		 
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.kind
+'canine'
+>>> e.kind
+'canine'
+>>> d.name
+'Fido'
+>>> e.name
+'Buddy'
+>>> 
