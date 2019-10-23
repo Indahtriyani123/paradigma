@@ -1,0 +1,36 @@
+def pin():
+    tries = 3
+	while tries >=0:
+		pin = int (input('pin yang anda masukan salah,silahkan masukan pin yang benar :'))
+		if pin ==(1234):
+			print("pin yang anda masukan benar")
+			return True
+		else :
+			print ("pin yang anda masukan salah")
+			return False
+		    def menu():
+	saldo = 1000000
+	if pin():
+		print('1 melihat saldo\n')
+		print('2 penarikan\n')
+		print('3 keluar\n')
+		transaksi = int(input('pilih transaksi :'))
+		if transaksi == 1
+		print ('saldo anda adalah Rp',saldo,'\n')
+		restart=input('apakah anda akan melanjutkan transaksi?')
+		if restart in ('tidak'):
+                    print('TERIMAKASIH')
+
+                    elif transaksi ==2:
+                        penarikan = float(input('berapa nominal yang akan anda tarik? \n RP 50.000
+                                                'Rp 100.000 Rp 200.000 :'))
+                        if penarikan in [50.000,100.000,200.000]:
+                            saldo = saldo - penarikan
+                            print ('\n saldo anda saat ini adalah Rp',saldo)
+                            
+                elif transaksi == 3:
+                    print('TERIMAKASIH\n')
+
+                    menu()
+                    
+
