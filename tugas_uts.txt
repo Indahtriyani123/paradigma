@@ -1,0 +1,24 @@
+class pegawailab():
+    def_init_(self,nip, nama, alamat)
+	self.nama = nama
+	self.nip = nip
+	self.alamat = alamat
+
+     def rajin(self)
+	print("kariawan rajin")
+
+     def berprestasi(self)
+	print("karyawan Berprestasi")
+
+class laboran(pegawailab):
+     def__init__(self, nip, nama, alamat)
+	self.nip = nip
+	self.nama = nama
+	self.alamat = alamat
+	
+x = laboran("001", "perjo", "kalasan")
+print()
+print("nip:", x.nip)
+print("nama:" , x.nama)
+print("alamat:", x.alamat)
+x.rajin()
