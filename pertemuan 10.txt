@@ -1,0 +1,127 @@
+program 1
+
+def multiply_2_pure(numbers): #mendeklarasikan function dengan nama multiply_2_pure dan dengan parameter (numbers)
+    new_numbers = []
+    for n in numbers: #perulangan untuk nilai yang ada dalam parameter
+        new_numbers.append(n * 2) 
+    return new_numbers #memberi nilai balik dari function
+
+original_numbers = [1, 3, 5, 10] #membuat function yang didalamnya memiliki nilai
+changed_numbers = multiply_2_pure(original_numbers) # membuat konstruktor dari function multiply_2_pure dengan parameter function yang dibuat sebelumnya
+
+print(original_numbers) # menampilkan nilai dari original_numbers
+print(changed_numbers)  # menampilkan nilai dari changed_numbers yang merupakan perkalian 2 dari nilai original_numbers
+
+ 
+program 2
+
+
+mutable_collection = ['Tim', 10, [4, 5]] # variabel yang nilainya dapat diubah
+immutable_collection = ['Tim', 10, [4, 5]] #variabel yang nilainya tidak dapat diubah
+print(mutable_collection[2])   # menampilkan variabel mutable
+print(immutable_collection[2]) # menampilkan variable immutable
+mutable_collection[1] = 15  #mengubah nilai mutable 10 menjadi 15
+immutable_collection[1] = 15 # mengubah nilai immutable 10 menjadi 15 namun tidak bisa
+
+program 3
+
+
+immutable_collection[2].append(6) # menambahkan variabel immutable_collection[2] dengan nilai 6
+print(immutable_collection[2]) #menampilkan immutable_collection[2] sehingga menjadi ada angka 6 nya
+
+program 4
+
+immutable_collection[2] = [4, 5]  # menambahkan nilai variabel dengan nilai 4,5
+
+program 5
+
+def write_repeat(message, n): #mendeklarasikan function write_repeat dengan parameter variabel message dan n
+    for i in range(n): # perulangan untuk variabel n
+        print(message) # menampilkan variable message
+
+write_repeat('Hello', 5) #isi parameter variabel message adalah 'hello' dan variable n =5 yang berarti message tersebut diulang sebanyak 5 kali
+
+
+program 6
+
+def hof_write_repeat(message, n, action): #mendeklarasikan function hof_write_repeat dengan parameter variabel message , n dan action
+    for i in range(n): # perulangan untuk variabel n
+        action(message) # parameter action berisi message
+
+hof_write_repeat('Hello', 5, print) # menampilkan isi dari parameter sebanyak 5 kali
+import logging
+hof_write_repeat('Hello', 5, logging.error) # menampilkan isi dari parameter dengan action
+
+
+program 7
+
+
+def add2(numbers): #mendeklarasikan function add2 dengan parameter numbers
+    new_numbers = []
+    for n in numbers: #perulangan untuk variable numbers
+        new_numbers.append(n + 2) #nuilai dari numbers nantinya adalah variable n + 2
+    return new_numbers #nilai balik untuk function
+
+print(add2([23, 88])) #menampilkan nilai pada variabel dengan tambahan 2
+
+
+program 8
+
+
+
+def hof_add(increment): # mendekklarasikan function hof_add dengan parameter (increment)
+    def add_increment(numbers): #parameter numbers
+        new_numbers = [] #konstruktor
+        for n in numbers: #perulangan untuk variable numbers
+            new_numbers.append(n + increment) # variable n increment
+        return new_numbers #memberi nilai balik pada function new_numbers
+    return add_increment # #memberi nilai balik pada function add_increment
+add5 = hof_add(5) #konstruktor
+print(add5([23, 88]))  #menampilkan add5,yaitu angka tersebut ditambah 5 
+add10 = hof_add(10)
+print(add10([23, 88]))  #menampilkan add10 
+
+
+program 9
+
+def hof_product(multiplier): #mendeklarasikan function
+    return lambda x: x * multiplier 
+
+mult6 = hof_product(6)
+print(mult6(6)) # 36
+
+program 10
+
+names = ['Shivani', 'Jason', 'Yusef', 'Sakura']
+greeted_names = map(lambda x: 'Hi ' + x, names)
+print(greeted_names)
+for name in greeted_names:
+    print(name)
+
+program 11
+
+numbers = [13, 4, 18, 35]
+div_by_5 = filter(lambda num: num % 5 == 0, numbers)
+print(list(div_by_5)) 
+
+program 12
+
+
+arbitrary_numbers = map(lambda num: num ** 3, filter(lambda num: num % 3 == 0, range(1, 21)))
+print(list(arbitrary_numbers)) 
+
+
+program 13
+
+
+numbers = [13, 4, 18, 35]
+div_by_5 = [num for num in numbers if num % 5 == 0]
+print(div_by_5)
+arbitrary_numbers = [num ** 3 for num in range(1, 21) if num % 3 == 0]
+print(arbitrary_numbers) 
+
+
+
+
+
+
